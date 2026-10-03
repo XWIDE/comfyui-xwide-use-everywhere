@@ -29,7 +29,7 @@ const CSS = `
   padding: 12px 14px; margin-bottom: 10px;
 }
 .xwue-about .xwue-card img {
-  width: 92px; height: 92px; object-fit: contain; flex: none;
+  width: 160px; height: 92px; object-fit: contain; flex: none;
   background: #f4f5f7; border: 1px solid #c9ced4; border-radius: 8px;
 }
 .xwue-about .xwue-card > .xwue-body { min-width: 0; flex: 1 1 auto; }
@@ -97,7 +97,7 @@ export function build_xwide_about() {
     root.appendChild(el("div", "xwue-title", "X-WIDE Use Everywhere  " + VERSION));
     root.appendChild(el("div", "xwue-sub", "基于开源项目 cg-use-everywhere 的修复版本 / A fixed fork of cg-use-everywhere"));
 
-    const logo_url = new URL("./logo_xwide_icon.png", import.meta.url).href;
+    const logo_url = new URL("./logo_xwide.png", import.meta.url).href;
 
     root.appendChild(el("div", "xwue-sec first", "作者 / Authors"));
     root.appendChild(card(
