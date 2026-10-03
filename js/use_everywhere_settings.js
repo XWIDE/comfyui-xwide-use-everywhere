@@ -316,7 +316,7 @@ export function canvas_menu_settings() {
     options.push(null); // divider
     options.push(
         {
-            content: `ℹ 关于 / About  v${VERSION}`,
+            content: `ℹ 关于 / About  X-WIDE Anything Everywhere ${VERSION}`,
             callback: () => { show_xwide_about_window() }
         },
         {
