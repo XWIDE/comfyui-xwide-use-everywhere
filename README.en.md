@@ -26,6 +26,7 @@ This project is a bug-fix branch of the original `cg-use-everywhere` (UE Nodes) 
 | UE virtual links | Not drawn at all / intermittently missing on some ComfyUI frontend versions | ✅ Self-healing watchdog restores them reliably |
 | Flowing-link animation | Missing along with the links | ✅ Works again |
 | Nodes, params, workflow format | — | **Identical** to the original (same node IDs) |
+| Node display names | `Anything Everywhere` etc. | Prefixed with `X-WIDE ` (node IDs unchanged, so the node search box finds X-WIDE) |
 | Installing both at once | — | ⚠️ **Not allowed** (identical node IDs overwrite each other); a loud warning is printed at startup |
 
 ## The fix (technical details)
@@ -94,7 +95,9 @@ You can also just open [`about.html`](about.html) from the repository root in a 
   1. Hard-refresh (Ctrl + Shift + R); 2. make sure the original plugin is not installed as well;
   3. open the F12 console and look for `[XW-UE fix]` lines (a healthy install prints nothing);
   4. set `Animate UE links` to `Dots` and `Show links` to `All`.
-- **Will it break my existing workflows?** No — node IDs, parameters and formats match the original 7.8.
+- **Will it break my existing workflows?** No — node IDs, parameters and formats match the original 7.8
+  (the only difference is the node display names, which now carry an `X-WIDE ` prefix).
+- **How do I find it in the node search box?** Search for `X-WIDE`, or keep searching `Anything Everywhere`.
 - **Can I keep the original installed and use different nodes?** No — the node IDs are identical, install only one.
 
 ## License & credits

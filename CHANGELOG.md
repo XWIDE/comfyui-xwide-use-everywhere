@@ -28,6 +28,8 @@
 - 设置页新增「关于 / 作者」面板：设置 → Use Everywhere → **About**
   （`js/xwide_about.js`），同时提供可双击打开的独立页面 `about.html`。
 - 新增仓库/节点图标 `docs/icon.png`。
+- 7 个节点的显示名（`display_name`）加 `X-WIDE ` 前缀，节点搜索框里可直接搜到 X-WIDE；
+  **节点 ID 未改动**，老工作流照旧打开。
 - 启动时检测是否与原版 `cg-use-everywhere` 同时安装，若检测到则打印醒目告警。
 
 ### ⚠️ 兼容性
