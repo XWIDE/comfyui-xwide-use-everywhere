@@ -10,7 +10,7 @@ class ComboClone(io.ComfyNode):
         return io.Schema(
             node_id  = "Combo Clone",
             category = "everywhere",
-            display_name = "Combo Clone",
+            display_name = "X-WIDE Combo Clone",
             description = "The combo on this node will replicate whatever the output is connected to",
             inputs   = [
                 io.Combo.Input("combo", options=['connect me to a combo widget']),
@@ -34,7 +34,7 @@ class SimpleString(io.ComfyNode):
         return io.Schema(
             node_id  = "Simple String",
             category = "everywhere/deprecated",
-            display_name = "Simple String",
+            display_name = "X-WIDE Simple String",
             description = "Deprecated - use the core comfy string",
             is_deprecated = True,
             inputs   = [
@@ -55,7 +55,7 @@ class SeedEverywhere(io.ComfyNode):
         return io.Schema(
             node_id  = "Seed Everywhere",
             category = "everywhere/deprecated",
-            display_name = "Seed Everywhere",
+            display_name = "X-WIDE Seed Everywhere",
             description = "Deprecated - should automatically be replaced",
             is_deprecated = True,
             inputs   = [
@@ -76,7 +76,7 @@ class AnythingEverywhere(io.ComfyNode):
         return io.Schema(
             node_id  = "Anything Everywhere",
             category = "everywhere",
-            display_name = "Anything Everywhere",
+            display_name = "X-WIDE Anything Everywhere",
             inputs   = [
                 anything.Input("anything", optional=True),
             ],
@@ -93,7 +93,7 @@ class AnythingEverywherePrompts(io.ComfyNode):
         return io.Schema(
             node_id  = "Prompts Everywhere",
             category = "everywhere/deprecated",
-            display_name = "Anything Everywhere Prompts", 
+            display_name = "X-WIDE Anything Everywhere Prompts", 
             description = "Deprecated - should automatically be replaced",
             is_deprecated = True,
             inputs   = [
@@ -113,7 +113,7 @@ class AnythingEverywhereTriplet(io.ComfyNode):
         return io.Schema(
             node_id  = "Anything Everywhere3",
             category = "everywhere/deprecated",
-            display_name = "Anything Everywhere Triplet", 
+            display_name = "X-WIDE Anything Everywhere Triplet", 
             description = "Deprecated - should automatically be replaced",
             is_deprecated = True,
             inputs   = [
@@ -134,7 +134,7 @@ class AnythingSomewhere(io.ComfyNode):
         return io.Schema(
             node_id  = "Anything Everywhere?",
             category = "everywhere/deprecated",
-            display_name = "Anything Somewhere", 
+            display_name = "X-WIDE Anything Somewhere", 
             description = "Deprecated - should automatically be replaced",
             is_deprecated = True,
             inputs   = [
