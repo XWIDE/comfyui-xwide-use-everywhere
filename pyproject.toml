@@ -7,6 +7,10 @@ readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "X-WIDE" }]
 keywords = ["comfyui", "use everywhere", "anything everywhere", "xwide", "broadcast", "link", "fix"]
+dependencies = []
+classifiers = [
+    "Operating System :: OS Independent",
+]
 
 [project.urls]
 Repository = "https://github.com/XWIDE/comfyui-xwide-use-everywhere"
