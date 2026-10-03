@@ -2,14 +2,14 @@
 
 ## 🌐 Language / 语言
 
-**简体中文** ｜ [English](README.en.md)
+**简体中文** ｜ [English](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/README.en.md)
 
 > 本插件是开源项目 [cg-use-everywhere](https://github.com/chrisgoringe/cg-use-everywhere)
 > （原作者 [chrisgoringe](https://github.com/chrisgoringe)）的修复版本。
 > **只做了一处修复：浏览器端 UE 虚拟连线（以及连线上的「流动」动画）不显示的问题。**
 > 节点、参数、行为与原版完全一致，可直接替换。
 
-![示意图](docs/simple-example.png)
+![示意图](https://raw.githubusercontent.com/XWIDE/comfyui-xwide-use-everywhere/main/docs/simple-example.png)
 
 ---
 
@@ -81,7 +81,7 @@ git clone https://github.com/XWIDE/comfyui-xwide-use-everywhere.git
 ## 关于 / About
 
 **设置 → Use Everywhere → About** 里可以看到作者与修复说明（本版本新增的面板），
-也可以直接双击仓库根目录的 [`about.html`](about.html) 打开独立页面。
+也可以直接双击仓库根目录的 [`about.html`](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/about.html) 打开独立页面。
 
 ## 常见问题
 
@@ -97,7 +97,7 @@ git clone https://github.com/XWIDE/comfyui-xwide-use-everywhere.git
 
 本项目以 **Apache License 2.0** 发布，是 [cg-use-everywhere](https://github.com/chrisgoringe/cg-use-everywhere)
 （作者 **chrisgoringe**，Apache-2.0）的修改版本，版权归原作者所有。
-修改内容与版权声明见 [NOTICE](NOTICE) 与 [CHANGELOG.md](CHANGELOG.md)；
-原版完整使用手册保留为 [UPSTREAM-README.md](UPSTREAM-README.md)。
+修改内容与版权声明见 [NOTICE](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/NOTICE) 与 [CHANGELOG.md](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/CHANGELOG.md)；
+原版完整使用手册保留为 [UPSTREAM-README.md](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/UPSTREAM-README.md)。
 
 喜欢这套节点的原始设计，可以去 [请原作者喝咖啡 ☕](https://www.buymeacoffee.com/chrisgoringe)。

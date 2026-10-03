@@ -2,7 +2,7 @@
 
 ## 🌐 Language / 语言
 
-[简体中文](README.md) ｜ **English**
+[简体中文](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/README.md) ｜ **English**
 
 > This is a fixed fork of the open-source project
 > [cg-use-everywhere](https://github.com/chrisgoringe/cg-use-everywhere)
@@ -10,7 +10,7 @@
 > **It fixes exactly one bug: UE virtual links — and the "flowing" animation on them — were not drawn in the browser.**
 > Nodes, parameters and behaviour are identical to the original, so it is a drop-in replacement.
 
-![example](docs/simple-example.png)
+![example](https://raw.githubusercontent.com/XWIDE/comfyui-xwide-use-everywhere/main/docs/simple-example.png)
 
 ---
 
@@ -87,7 +87,7 @@ Then hard-refresh with **Ctrl + Shift + R**.
 ## About / Authors
 
 **Settings → Use Everywhere → About** shows the authors panel and this fix note (added by this fork).
-You can also just open [`about.html`](about.html) from the repository root in a browser.
+You can also just open [`about.html`](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/about.html) from the repository root in a browser.
 
 ## FAQ
 
@@ -104,7 +104,7 @@ You can also just open [`about.html`](about.html) from the repository root in a 
 
 Released under the **Apache License 2.0**. This is a modified version of
 [cg-use-everywhere](https://github.com/chrisgoringe/cg-use-everywhere) by **chrisgoringe** (Apache-2.0);
-all original copyright remains with the original author. See [NOTICE](NOTICE) and
-[CHANGELOG.md](CHANGELOG.md); the upstream manual is kept as [UPSTREAM-README.md](UPSTREAM-README.md).
+all original copyright remains with the original author. See [NOTICE](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/NOTICE) and
+[CHANGELOG.md](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/CHANGELOG.md); the upstream manual is kept as [UPSTREAM-README.md](https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/UPSTREAM-README.md).
 
 If you like the original design, consider [buying the original author a coffee ☕](https://www.buymeacoffee.com/chrisgoringe).
