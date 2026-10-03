@@ -7,7 +7,7 @@ import { edit_restrictions } from "./ue_properties_editor.js";
 import { i18ify_settings } from "./i18n.js";
 import { VERSION, shared } from "./shared.js";
 import { for_all_graphs } from "./recursive_callbacks.js";
-import { build_xwide_about } from "./xwide_about.js";
+import { build_xwide_about, show_xwide_about_window } from "./xwide_about.js";
 
 const _SETTINGS = [
     {
@@ -315,6 +315,10 @@ export function canvas_menu_settings() {
     const options = []
     options.push(null); // divider
     options.push(
+        {
+            content: `ℹ 关于 / About  v${VERSION}`,
+            callback: () => { show_xwide_about_window() }
+        },
         {
             content: (app.ui.settings.getSettingValue('Use Everywhere.Graphics.showlinks')>0) ? "Hide UE links" : "Show UE links",
             callback: () => {

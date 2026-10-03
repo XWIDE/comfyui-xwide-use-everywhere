@@ -26,7 +26,9 @@
 
 - 插件显示名称改为 **X-WIDE Use Everywhere**（`[tool.comfy] DisplayName`）。
 - 设置页新增「关于 / 作者」面板：设置 → Use Everywhere → **About**
-  （`js/xwide_about.js`），同时提供可双击打开的独立页面 `about.html`。
+  （`js/xwide_about.js`），同时提供可双击打开的独立页面 `about.html`，
+  以及画布右键菜单里的 **`ℹ 关于 / About`** 入口（自带样式的浮层窗口，
+  Esc / 点遮罩 / 关闭按钮都能关掉）。
 - 新增仓库/节点图标 `docs/icon.png`。
 - 7 个节点的显示名（`display_name`）加 `X-WIDE ` 前缀，节点搜索框里可直接搜到 X-WIDE；
   **节点 ID 未改动**，老工作流照旧打开。

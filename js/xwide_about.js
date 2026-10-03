@@ -137,3 +137,91 @@ export function build_xwide_about() {
 
     return root;
 }
+
+/* ------------------------------------------------------------------ *
+ * 画布右键菜单里的「关于 / About」浮层窗口
+ * 自带样式，不依赖 ComfyUI 的 modal，也不依赖原版的 floating_window。
+ * ------------------------------------------------------------------ */
+
+const WINDOW_ID = "xwue-about-window";
+const WINDOW_STYLE_ID = "xwue-about-window-style";
+
+const WINDOW_CSS = `
+.xwue-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 10000; }
+.xwue-win {
+    position: fixed; z-index: 10001; top: 70px; left: 50%; transform: translateX(-50%);
+    width: min(720px, calc(100vw - 60px)); max-height: calc(100vh - 140px);
+    display: flex; flex-direction: column;
+    background: #18181b; color: #cfd4da;
+    border: 1px solid #3a3a3a; border-radius: 10px;
+    box-shadow: 0 14px 44px rgba(0, 0, 0, 0.65);
+    font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+}
+.xwue-win-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 11px 16px; border-bottom: 1px solid #33373d;
+    font-size: 15px; font-weight: 700; color: #ffd479;
+}
+.xwue-win-close {
+    background: #2a2d33; color: #cfd4da; border: 1px solid #3a3a3a; border-radius: 6px;
+    padding: 4px 12px; font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.xwue-win-close:hover { background: #3a3f47; color: #fff; }
+.xwue-win-body { padding: 16px 18px; overflow: auto; }
+`;
+
+function ensure_window_style() {
+    if (document.getElementById(WINDOW_STYLE_ID)) return;
+    const style = document.createElement("style");
+    style.id = WINDOW_STYLE_ID;
+    style.textContent = WINDOW_CSS;
+    document.head.appendChild(style);
+}
+
+export function show_xwide_about_window() {
+    ensure_style();
+    ensure_window_style();
+
+    const old_window = document.getElementById(WINDOW_ID);
+    if (old_window) old_window.remove();
+    const old_overlay = document.getElementById(WINDOW_ID + "-overlay");
+    if (old_overlay) old_overlay.remove();
+
+    const overlay = el("div", "xwue-overlay");
+    overlay.id = WINDOW_ID + "-overlay";
+
+    const win = el("div", "xwue-win");
+    win.id = WINDOW_ID;
+
+    const head = el("div", "xwue-win-head");
+    head.appendChild(el("span", null, "X-WIDE Use Everywhere  " + VERSION));
+    const close = el("button", "xwue-win-close", "关闭 / Close");
+    close.title = "Esc";
+    head.appendChild(close);
+
+    const body = el("div", "xwue-win-body");
+    body.appendChild(build_xwide_about());
+
+    win.appendChild(head);
+    win.appendChild(body);
+
+    function dismiss() {
+        document.removeEventListener("keydown", on_keydown, true);
+        overlay.remove();
+        win.remove();
+    }
+    function on_keydown(event) {
+        if (event.key === "Escape") {
+            event.stopPropagation();
+            dismiss();
+        }
+    }
+
+    close.addEventListener("click", dismiss);
+    overlay.addEventListener("click", dismiss);
+    document.addEventListener("keydown", on_keydown, true);
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(win);
+    close.focus();
+}
