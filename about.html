@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>X-WIDE Use Everywhere</title>
+<style>
+  body { margin: 0; padding: 28px; background: #18181b; color: #ddd;
+         font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; line-height: 1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 24px; color: #ffd479; margin: 0 0 6px; }
+  .sub { color: #9aa0a8; font-size: 14px; margin-bottom: 22px; }
+  h2 { font-size: 16px; color: #cfd4da; margin: 26px 0 10px; padding-top: 14px; border-top: 1px solid #33373d; }
+  h2.first { margin-top: 0; padding-top: 0; border-top: none; }
+  .card { display: flex; align-items: center; gap: 16px; max-width: 560px;
+          background: #1b1b1b; border: 1px solid #3a3a3a; border-radius: 8px;
+          padding: 14px 16px; margin-bottom: 12px; }
+  .card img { width: 96px; height: 96px; object-fit: contain; background: #f4f5f7;
+              border: 1px solid #c9ced4; border-radius: 8px; flex: none; }
+  .who { font-size: 17px; font-weight: 600; color: #ffd479; margin-bottom: 6px; }
+  .what { font-size: 14px; color: #9aa0a8; }
+  a { color: #79a9ff; }
+  .note { color: #9aa0a8; font-size: 13px; margin-top: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>X-WIDE Use Everywhere</h1>
+  <div class="sub">基于开源项目 cg-use-everywhere 的修复版本 / A fixed fork of cg-use-everywhere</div>
+
+  <h2 class="first">作者 / Authors</h2>
+  <div class="card">
+    <img src="js/logo_xwide_icon.png" alt="X-WIDE">
+    <div>
+      <div class="who">X-WIDE（本版本 / This version）</div>
+      <div class="what">在原版基础上修复了浏览器端连线不显示的 BUG，其余功能与原版保持一致，遵循 Apache-2.0 继续开源。</div>
+      <div class="what">
+        <a href="https://github.com/XWIDE" target="_blank" rel="noreferrer">打开作者主页 / Author Page</a> ·
+        <a href="https://github.com/XWIDE/comfyui-xwide-use-everywhere" target="_blank" rel="noreferrer">开源项目首页 / GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div>
+      <div class="who">chrisgoringe（原作者 / Original author）</div>
+      <div class="what">cg-use-everywhere —— 本项目的原始版本由 chrisgoringe 开发，版权归原作者所有。</div>
+      <div class="what">
+        <a href="https://github.com/chrisgoringe/cg-use-everywhere" target="_blank" rel="noreferrer">查看原项目 / View Original</a> ·
+        <a href="https://www.buymeacoffee.com/chrisgoringe" target="_blank" rel="noreferrer">请原作者喝咖啡 / Buy him a coffee</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>本版本修复内容 / What this fork fixes</h2>
+  <div>
+    修复 <b>浏览器端 UE 虚拟连线（以及连线上的流动动画）不显示</b> 的问题：在部分 ComfyUI 前端版本下，
+    插件因加载时序问题未能挂上画布绘制钩子，表现为连线时有时无、甚至一条都不画。
+    本版本由自愈看门狗补齐（分析器、控制器、绘制钩子、连线列表），写盘后每次打开页面自动生效。
+  </div>
+  <div>本版本只做这一处修复，节点、参数、行为与原版一致。</div>
+  <div class="note">注意：节点 ID 与原版相同，请勿与原版 cg-use-everywhere 同时安装。本插件为 Apache-2.0 许可的衍生作品。</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+X-WIDE Use Everywhere — NOTICE
+================================
+
+本作品是以下开源项目的修改版本（衍生作品）：
+
+    原项目名称 : cg-use-everywhere (UE Nodes)
+    原作者     : chrisgoringe
+    原项目仓库 : https://github.com/chrisgoringe/cg-use-everywhere
+    原版本     : 7.8
+    原许可     : Apache License 2.0
+
+本修改版本由 X-WIDE 制作并发布，修改内容如下（同时见 CHANGELOG.md）：
+
+    1. 修复 BUG：浏览器端 UE 虚拟连线（Anything Everywhere 广播连线）
+       以及连线上的「流动」动画不显示、时有时无的问题。
+       修正位于 js/use_everywhere.js 末尾的自愈看门狗段（标记 [XW-UE fix]）。
+    2. 品牌信息调整：插件显示名称、设置页「关于 / 作者」面板（js/xwide_about.js）、
+       仓库图标（docs/icon.png）与本说明文档。
+       这一项不改变任何功能行为。
+    3. 新增安装冲突检测：启动时若检测到原版 cg-use-everywhere 同时安装，打印醒目告警。
+
+除上述修改外，本项目的源代码与原版一致：节点 ID、节点参数、工作流格式均未改动，
+以保证已保存的工作流可以直接使用。
+
+原作者 chrisgoringe 的版权声明与 Apache License 2.0 许可条款完整保留，
+全文见本仓库 LICENSE 文件。上游完整使用手册保留为 UPSTREAM-README.md。
+
+本项目同样以 Apache License 2.0 许可发布。
+
+    Copyright (c) chrisgoringe（原版作者，保留所有原始权利）
+    Copyright (c) X-WIDE（本修改版本）

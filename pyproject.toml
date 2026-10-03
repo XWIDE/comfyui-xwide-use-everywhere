@@ -1,0 +1,20 @@
+[project]
+name = "xwide-use-everywhere"
+version = "7.8.1"
+description = "X-WIDE Use Everywhere - a fixed fork of cg-use-everywhere: fixes UE virtual links and the flowing-link animation not being drawn in the browser."
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "X-WIDE" }]
+keywords = ["comfyui", "use everywhere", "anything everywhere", "xwide", "broadcast", "link", "fix"]
+
+[project.urls]
+Repository = "https://github.com/XWIDE/comfyui-xwide-use-everywhere"
+"Bug Tracker" = "https://github.com/XWIDE/comfyui-xwide-use-everywhere/issues"
+Documentation = "https://github.com/XWIDE/comfyui-xwide-use-everywhere/blob/main/README.md"
+
+[tool.comfy]
+PublisherId = "xwide"
+DisplayName = "X-WIDE Use Everywhere"
+Icon = "https://raw.githubusercontent.com/XWIDE/comfyui-xwide-use-everywhere/main/docs/icon.png"
+includes = []
