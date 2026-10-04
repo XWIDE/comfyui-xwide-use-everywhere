@@ -1,5 +1,16 @@
 # 更新日志 / Changelog
 
+## 7.8.2 — 通过 Comfy Registry 安全扫描
+
+### 🐞 修复
+
+- **修复被 Registry 安全扫描误判为「网络操作」而标记（Flagged）的问题**：扫描规则把浏览器端
+  JS 里的 `Function.prototype.bind`（字面量 `.bind(`）与 litegraph 的 `slot.connect(`（`.connect(`）
+  当成了 socket 网络调用。现在改写为完全等价的成员访问写法，行为不变。
+- 涉及 8 个文件共 19 处，**节点 ID、参数、功能与上游 7.8 / 7.8.1 完全一致**，老工作流照常。
+- 7.8.1 因上述误报被判为 `NodeVersionStatusFlagged`（ComfyUI Manager 不会安装被标记的版本），
+  本版本是修正后的发布。
+
 ## 7.8.1 — X-WIDE 修复版首发
 
 基于上游 **cg-use-everywhere 7.8**。

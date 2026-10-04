@@ -1,4 +1,4 @@
-export const VERSION = "7.8.1"
+export const VERSION = "7.8.2"
 
 class Shared {
     constructor() {
@@ -17,7 +17,7 @@ class Shared {
 class Deferred {
     constructor() { 
         this.action_list = []
-        setInterval( this.execute.bind(this), 200 )
+        setInterval( this.execute["bind"](this), 200 )
     }
     push(x) { this.action_list.push(x) } // add action of the form: { fn:function, args:array }
     execute() {

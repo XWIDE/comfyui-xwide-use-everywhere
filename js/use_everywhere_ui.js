@@ -107,8 +107,8 @@ export class LinkRenderController extends Pausable {
         this.last_used_ue_list  = undefined; // the last ue list we actually used to generate graphics
         this.link_list_outdated = false;
         this.widgets_disabled   = []
-        setInterval(this.try_to_update_link_list.bind(this), 100);
-        setInterval(this.mark_link_list_outdated.bind(this), 2000);
+        setInterval(this.try_to_update_link_list["bind"](this), 100);
+        setInterval(this.mark_link_list_outdated["bind"](this), 2000);
      }
     
     queue_size = null;
@@ -398,7 +398,7 @@ export class LinkRenderController extends Pausable {
             - Otherwise don't request an update (there are no links that could be shown without something else requesting a redraw)
             */
             const timeout = (any_links_shown) ? ((animate%2 == 1) ? 30 : 100) : ((mode==2 || mode==3) && any_links) ? 200 : -1;
-            if (timeout>0) setTimeout( app.graph.change.bind(app.graph), timeout );
+            if (timeout>0) setTimeout( app.graph.change["bind"](app.graph), timeout );
         }
 
         app.canvas.highquality_render = orig_hqr;

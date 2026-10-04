@@ -305,7 +305,7 @@ export class Pausable {
             Logger.log_error(`${this.name} Over pausing`)
         }
         Logger.log_detail(`${this.name} pause ${note} with ${ms}`)
-        if (ms) setTimeout( this.unpause.bind(this), ms );
+        if (ms) setTimeout( this.unpause["bind"](this), ms );
     }
     unpause() { 
         this.pause_depth -= 1

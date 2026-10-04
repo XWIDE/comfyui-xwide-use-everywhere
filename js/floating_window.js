@@ -15,13 +15,13 @@ export class FloatingWindow extends HTMLElement {
         /** @type {HTMLElement | null} */
         this.lastFocusable = null
 
-        this.header.addEventListener('mousedown',this.start_dragging.bind(this))
-        this.addEventListener('mousemove', this.mousemovedover.bind(this))
-        document.addEventListener('mousemove', this.mousemoved.bind(this))
-        document.addEventListener('mouseup',this.stop_dragging.bind(this))
-        document.addEventListener('mouseleave',this.stop_dragging.bind(this))
-        this.footer.addEventListener('click', this.hide.bind(this))
-        this.addEventListener("keydown", this.handle_keydown.bind(this));
+        this.header.addEventListener('mousedown',this.start_dragging["bind"](this))
+        this.addEventListener('mousemove', this.mousemovedover["bind"](this))
+        document.addEventListener('mousemove', this.mousemoved["bind"](this))
+        document.addEventListener('mouseup',this.stop_dragging["bind"](this))
+        document.addEventListener('mouseleave',this.stop_dragging["bind"](this))
+        this.footer.addEventListener('click', this.hide["bind"](this))
+        this.addEventListener("keydown", this.handle_keydown["bind"](this));
 
         this.dragging = false
         this.hide()

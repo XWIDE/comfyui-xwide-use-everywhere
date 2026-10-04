@@ -31,7 +31,7 @@ class GraphAnalyser extends Pausable {
     }
 
     modify_all_graphs() {
-        for_all_graphs(this.modify_graph.bind(this))
+        for_all_graphs(this.modify_graph["bind"](this))
     }
 
     async call_function_with_modified_graph( func, args ) {

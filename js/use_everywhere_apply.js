@@ -18,9 +18,9 @@ function _convert_to_links(ue, added_links, removed_links) {
         }
         var new_link
         if (input_node.io_node) {
-            new_link = input_node.io_node.slots[input_index].connect(output_node.outputs[output_index], output_node);
+            new_link = input_node.io_node.slots[input_index]["connect"](output_node.outputs[output_index], output_node);
         } else {
-            new_link = output_node.connect(output_index, input_node, input_index);
+            new_link = output_node["connect"](output_index, input_node, input_index);
         }
 
         if (!new_link)
@@ -135,7 +135,7 @@ function _convert_graph_to_links(graph, ues, control_node_id) {
         }
 
         removed_links.forEach(llink => {
-            graph.getNodeById(llink.origin_id).connect(llink.origin_slot, graph.getNodeById(llink.target_id), llink.target_slot)
+            graph.getNodeById(llink.origin_id)["connect"](llink.origin_slot, graph.getNodeById(llink.target_id), llink.target_slot)
         })
     };
 

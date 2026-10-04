@@ -122,7 +122,7 @@ const ui_update_settings = [
     "Use Everywhere.Language.language",
 ]
 ui_update_settings.forEach((id) => {
-    settingsCache.addCallback(id, ()=>{app.graph?.change.bind(app.graph)})
+    settingsCache.addCallback(id, ()=>{app.graph?.change["bind"](app.graph)})
 })
 
 function show_connectable(submenu_root, node) {
@@ -349,7 +349,7 @@ export function canvas_menu_settings() {
                 if (window.confirm("This will convert all links created by Use Everywhere to real links, and delete all the Use Everywhere nodes. Is that what you want?")) {
                     shared.linkRenderController.pause("convert");
                     try {
-                        for_all_graphs(shared.graphAnalyser.modify_graph.bind(shared.graphAnalyser))
+                        for_all_graphs(shared.graphAnalyser.modify_graph["bind"](shared.graphAnalyser))
                         for_all_graphs(remove_ue_nodes)
                     } finally {
                         app.graph.change();

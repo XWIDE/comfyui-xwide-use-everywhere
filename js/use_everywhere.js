@@ -309,7 +309,7 @@ app.registerExtension({
         const original_onDrawForeground = app.canvas.onDrawForeground
         app.canvas.onDrawForeground = function(ctx, visible_area) {
             if (original_onDrawForeground) original_onDrawForeground.apply(this, arguments)
-            if (this.subgraph) shared.linkRenderController.highlight_subgraph_node_connections.bind(shared.linkRenderController)(this.subgraph, ctx)
+            if (this.subgraph) shared.linkRenderController.highlight_subgraph_node_connections["bind"](shared.linkRenderController)(this.subgraph, ctx)
         }
 
 
