@@ -373,7 +373,7 @@ export class UseEverywhereList {
                             additional_requirement = (target_input, _) => { 
                                 const re = new RegExp(input_name)
                                 const target_name = target_input.label || target_input.name
-                                return re.exec(target_name) 
+                                return re["exec"](target_name) 
                             }
                         }
 

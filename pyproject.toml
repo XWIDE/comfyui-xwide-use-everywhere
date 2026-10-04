@@ -1,6 +1,6 @@
 [project]
 name = "xwide-use-everywhere"
-version = "7.8.2"
+version = "7.8.3"
 description = "X-WIDE Use Everywhere - a fixed fork of cg-use-everywhere: fixes UE virtual links and the flowing-link animation not being drawn in the browser."
 license = { file = "LICENSE" }
 readme = "README.md"
